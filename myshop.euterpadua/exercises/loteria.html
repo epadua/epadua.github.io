@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Loteria</title>
+</head>
+<body>
+
+    <input type="text" id="numero"><br>
+    <input type="submit" id="chutar">
+
+<script>
+    //variavel com os numeros da loteria
+    var numLoteria = [];
+    //Sorteia 6 numeros aleatórios para variavel numLoteria
+    while (numLoteria.length < 6){
+        numLoteria.push(Math.round(Math.random() * 60));
+    }
+
+    var chuteLoteria = [];
+
+    var adicionarChute = function () {
+        var chute = document.getElementById("numero").value;
+        for(var i = 0; i < chuteLoteria.length; i++){
+            if(chuteLoteria[i] == numero) {
+                alert("Número já inserido!");
+                return;
+            }
+        }
+        chuteLoteria.push(numero);
+        console.log(chuteLoteria);
+    }
+
+    var botao = document.getElementById("chutar");
+    botao.onclick = adicionarChute;
+
+    if(chuteLoteria.length == 6){
+        document.write("Numeros Sorteados: " + numLoteria);
+        document.write("Numeros Chutados: " + chuteLoteria);
+    }
+
+</script>
+</body>
+</html>

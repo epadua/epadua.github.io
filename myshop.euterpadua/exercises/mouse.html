@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Loop</title>
+</head>
+<body>
+
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+    var tela = document.getElementById("tela");
+    var c = tela.getContext("2d");
+
+    c.fillStyle = "gray";
+    c.fillRect(0, 0, 600, 400);
+
+    atira = function (event) {
+        var x = event.pageX - tela.offsetLeft;
+        var y = event.pageY - tela.offsetTop;
+
+        c.fillStyle = "blue";
+        c.beginPath();
+        c.arc(x, y, 5, 0, 2 * 3.14);
+        c.fill();
+
+        console.log("clique realizado em, " + x + " e " + y + "!");
+    }
+
+    tela.onclick = atira;
+
+</script>
+
+</body>
+</html>

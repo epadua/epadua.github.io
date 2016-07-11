@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Olimpíadas</title>
+</head>
+<body>
+<script>
+    var pulaLinha = function () {
+        document.write("<br>");
+    }
+
+    var mostra = function (frase) {
+        document.write(frase);
+        pulaLinha();
+        pulaLinha();
+    }
+    //Variable from the years.
+    var anoPrimOlimp = 1896;
+    var anoDeOlimp = anoPrimOlimp;
+    var ultimoAnoOlimp = parseInt(prompt("Até que ano gostaria de saber quando teve Olimpíadas?"));
+    //Counter of Olimpics.
+    var quantOlimp = 0;
+
+    //Message informing the period from the request.
+    mostra("Mostrando todos os anos que houve Olimpíadas entre " + anoDeOlimp + " e " + ultimoAnoOlimp + "!");
+    //Do the math from anoDeOlimp till ultimoAnoOlimp.
+    while(anoDeOlimp < ultimoAnoOlimp) {
+        mostra("Em " + anoDeOlimp + " teve Olimpíada");
+        anoDeOlimp = anoDeOlimp +4;
+        quantOlimp = quantOlimp + 1;
+    }
+    //End of the request's message.
+    mostra("Entre " + anoPrimOlimp + " e " + ultimoAnoOlimp + " nós tivemos no total " + quantOlimp + " Olimpíadas! Ufa, quanta Olimpíada!");
+</script>
+</body>
+</html>

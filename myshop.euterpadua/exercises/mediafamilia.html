@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Familia</title>
+</head>
+<body>
+<script>
+    var pulaLinha = function () {
+        document.write("<br>");
+    }
+
+    var mostra = function (frase) {
+        document.write(frase);
+        pulaLinha();
+        pulaLinha();
+    }
+
+    var totalDeFamiliares = prompt("Quantas pessoas estão na Família?");
+    var numero = 1;
+    var somaDeIdades = 0;
+
+    while(numero <= totalDeFamiliares){
+        var idadeTexto = prompt("Qual é a idade?");
+        var idade = parseInt(idadeTexto);
+
+        somaDeIdades = somaDeIdades + idade;
+        numero++;
+    }
+
+    var media = somaDeIdades / totalDeFamiliares;
+
+    mostra("A média de idade dos membros da família é: " + media);
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bandeiras</title>
+</head>
+<body>
+
+<canvas id="band1" width="600" height="400"></canvas>
+<br><br>
+<canvas id="band2" width="600" height="400"></canvas>
+
+<script>
+
+//Bandeira Colombia
+    var colombia = document.getElementById("band1");
+    var c = colombia.getContext("2d");
+
+    c.fillStyle = "yellow";
+    c.fillRect(0, 0, 600, 200);
+    c.fill();
+
+    c.fillStyle = "blue";
+    c.fillRect(0, 200, 600, 100);
+    c.fill();
+
+    c.fillStyle = "red";
+    c.fillRect(0, 300, 600, 100);
+    c.fill();
+
+//Bandeira Madascar
+    var madagascar = document.getElementById("band2");
+    var d = madagascar.getContext("2d");
+
+    d.fillStyle = "red";
+    d.fillRect(200, 0, 400, 200);
+    d.fill();
+
+    d.fillStyle = "green";
+    d.fillRect(200, 200, 400, 200);
+    d.fill();
+
+
+
+</script>
+
+</body>
+</html>

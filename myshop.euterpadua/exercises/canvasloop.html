@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Loop</title>
+</head>
+<body>
+
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+    var quadrados = document.getElementById("tela");
+    var pincel = quadrados.getContext("2d");
+
+    desenhaQuadradoVerde = function (x, y) {
+        pincel.fillStyle = "green";
+        pincel.fillRect(x, y, 50, 50);
+
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x, y, 50, 50)
+    }
+
+    desenhaQuadradoVermelho = function (x, y) {
+        pincel.fillStyle = "red";
+        pincel.fillRect(x, y, 50, 50);
+
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x, y, 50, 50)
+    }
+
+    desenhaBolaAzul = function (x, y) {
+        pincel.fillStyle = "blue";
+        pincel.arc(x, y, 25, 0, 2 * 3.14);
+        pincel.fill();
+    }
+
+
+    for( x = 0; x < 600; x = x +50) {
+        desenhaQuadradoVerde(x, 0);
+        desenhaQuadradoVermelho(x, 50);
+        desenhaBolaAzul(x, 100);
+    }
+
+</script>
+
+</body>
+</html>

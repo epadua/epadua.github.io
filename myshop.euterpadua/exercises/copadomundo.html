@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Copa do Mundo</title>
+</head>
+<body>
+<script>
+    var pulaLinha = function () {
+        document.write("<br>");
+    }
+
+    var mostra = function (frase) {
+        document.write(frase);
+        pulaLinha();
+        pulaLinha();
+    }
+    //Variable from the years.
+    var anoPrimCopa = 1930;
+    var anoDeCopa = anoPrimCopa;
+    var ultimoAnoCopa = parseInt(prompt("Até que ano gostaria de saber quando teve Copa do Mundo?"));
+    //Counter of Copas.
+    var quantCopas = 0;
+
+    //Message informing the period from the request.
+    mostra("Mostrando todos os anos que houve Copa do Mundo entre " + anoDeCopa + " e " + ultimoAnoCopa + "!");
+    //Do the math from anoDeCopa till ultimoAnoCopa.
+    while(anoDeCopa < ultimoAnoCopa) {
+        mostra("Em " + anoDeCopa + " teve Copa do Mundo!");
+        anoDeCopa = anoDeCopa +4;
+        quantCopas = quantCopas + 1;
+    }
+    //End of the request's message.
+    mostra("Entre " + anoPrimCopa + " e " + ultimoAnoCopa + " nós tivemos no total " + quantCopas + " Copas do Mundo! Ufa, quanta copa!");
+</script>
+</body>
+</html>

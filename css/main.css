@@ -1,0 +1,229 @@
+body {
+    font-size: 2em;
+    font-family: 'Josefin Sans', sans-serif;
+    text-shadow: #0f0f0f .15em .15em .2em;
+    color: #fff;
+}
+
+hr {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.name {
+    font-family: Lobster;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.subtitle {
+    margin: 0px;
+    padding: 0px;
+    top: 31px;
+    position: absolute;
+}
+
+.logo-top {
+    font-size: .6em;
+    position: absolute;
+    top: .5em;
+    left: 50%;
+}
+
+.shadow {
+    text-shadow: #000000 .15em .15em .2em;
+}
+
+.field {
+    background-color: #000000 ;
+    background: linear-gradient(180deg, #000000 32%, #337ab7, #000000);
+}
+
+.icon {
+    margin-top: 4em;
+    padding: 1em;
+}
+
+/*Code Portfolio Buttons*/
+
+.box1 {
+    width: 200px;
+    height: 200px;
+    border: solid 5px #ffffff;
+    border-radius: 100px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    position: relative;
+    float: left;
+    margin: 1em 2.5em;
+}
+
+.box1 img{
+    overflow: hidden;
+}
+
+.img-text {
+    text-align: center;
+    background-color: #337ab7;
+    width: 190px;
+    height: 190px;
+    padding-top: 85px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/*Code Portfolio Effects*/
+
+.effect-1 {}
+.effect-1 div {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: opacity 0.8s;
+}
+.effect-1:hover div {
+    opacity: 0.8;
+}
+
+.effect-2 {}
+.effect-2 div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    transform: scale(0);
+    transition-duration: .8s;
+}
+.effect-2:hover div {
+    transform: scale(1);
+    transition-duration: .8s;
+}
+
+.effect-3 {}
+.effect-3 div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    margin-left: -190px;
+    transition: margin-left 1s;
+}
+.effect-3:hover div {
+    margin-left: 0;
+}
+
+.topics {
+    color: rgb(255,192,000);
+}
+
+/*End Portfolio Effects*/
+
+/*End Portfolio Buttons*/
+
+/***** Slide Panel *****/
+
+.field-slide {
+    background-color: #000000;
+}
+
+#slider {
+    height:30em;
+    width:100%; }
+#mask {
+    overflow:hidden;
+    height:30em;
+}
+#slider ul {
+    margin:0;
+    padding:0;
+    position:relative;
+}
+#slider li {
+    width:100%;
+    height:30em;
+    position:absolute;
+    list-style:none;
+}
+
+/*Code to the Text Field*/
+
+.box-slide {
+    position: relative;
+}
+
+.text-slide {
+    position: absolute;
+    margin-top: -18em;
+    /*padding: 0 8em;*/
+}
+
+/* Code Time Animation*/
+
+#slider li.firstanimation {
+    animation: cycle 50s linear infinite;}
+#slider li.secondanimation {
+    animation: cycletwo 50s linear infinite;}
+#slider li.thirdanimation {
+    animation: cyclethree 50s linear infinite;}
+#slider li.fourthanimation {
+    animation: cyclefour 50s linear infinite;}
+#slider li.fifthanimation {
+    animation: cyclefive 50s linear infinite;}
+
+
+/* Code Change Image*/
+@keyframes cycle {
+    0% { right: 0px; }
+    4% { right: 0px; }
+    16% { right: 0px; opacity:1; z-index:0; }
+    20% { right: 325px; opacity: 0; z-index: 0; }
+    21% { right: -325px; opacity: 0; z-index: -1; }
+    92% { right: -325px; opacity: 0; z-index: 0; }
+    96% { right: -325px; opacity: 0; }
+    100%{ right: 0px; opacity: 1; }
+}
+
+@keyframes cycletwo {
+    0% { right: -325px; opacity: 0; }
+    16% { right: -325px; opacity: 0; }
+    20% { right: 0px; opacity: 1; }
+    24% { right: 0px; opacity: 1; }
+    36% { right: 0px; opacity: 1; z-index: 0; }
+    40% { right: 325px; opacity: 0; z-index: 0; }
+    41% { right: -325px; opacity: 0; z-index: -1; }
+    100%{ right: -325px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclethree {
+    0% { right: -325px; opacity: 0; }
+    36% { right: -325px; opacity: 0; }
+    40% { right: 0px; opacity: 1; }
+    44% { right: 0px; opacity: 1; }
+    56% { right: 0px; opacity: 1; }
+    60% { right: 325px; opacity: 0; z-index: 0; }
+    61% { right: -325px; opacity: 0; z-index: -1; }
+    100%{ right: -325px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclefour {
+    0% { right: -325px; opacity: 0; }
+    56% { right: -325px; opacity: 0; }
+    60% { right: 0px; opacity: 1; }
+    64% { right: 0px; opacity: 1; }
+    76% { right: 0px; opacity: 1; z-index: 0; }
+    80% { right: 325px; opacity: 0; z-index: 0; }
+    81% { right: -325px; opacity: 0; z-index: -1; }
+    100%{ right: -325px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclefive {
+    0% { right: -325px; opacity: 0; }
+    76% { right: -325px; opacity: 0; }
+    80% { right: 0px; opacity: 1; }
+    84% { right: 0px; opacity: 1; }
+    96% { right: 0px; opacity: 1; z-index: 0; }
+    100%{ right: 325px; opacity: 0; z-index: 0; }
+}
+/***** End Slide Panel *****/

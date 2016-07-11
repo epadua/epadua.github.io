@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adivinha</title>
+</head>
+<body>
+<script>
+    var pulaLinha = function () {
+        document.write("<br>");
+    }
+
+    var mostra = function (frase) {
+        document.write(frase);
+        pulaLinha();
+        pulaLinha();
+    }
+
+    var numeroPensado = Math.round(Math.random() * 10);
+    var numeroTentativas = 1;
+
+
+    while (numeroTentativas <= 3){
+            var chute = prompt("Já pensei em um Numero entre 0 e 10! Adivinhe qual!");
+
+            if (chute == numeroPensado){
+                mostra("Uau! Você acertou! Eu pensei no número " + chute + " também!");
+                break;
+            } else {
+                mostra("Errou! Tente de novo!");
+            }
+            numeroTentativas++;
+    }
+
+
+
+</script>
+</body>
+</html>
